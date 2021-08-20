@@ -31,13 +31,13 @@ public class ServletPaginaAgenda extends HttpServlet {
 		PrintWriter saida = response.getWriter();
 		
 		saida.write("<HTML><Body>");
-		saida.write("<form action=ServletAgenda>");
+		saida.write("<form action=ServletAgenda method=post>");
 		saida.write("<label for=\"nome\">Nome</label>");
-		saida.write("<input id=\"nome\" type=\"text\">");
+		saida.write("<input id=\"nome\" name=\"nome\" type=\"text\">");
 		saida.write("<label for=\"telefone\">Telefone</label>");
-		saida.write("<input id=\"telefone\" type=\"text\">");
+		saida.write("<input id=\"telefone\" name=\"telefone\" type=\"text\">");
 		saida.write("<label for=\"dta_nascimento\">Data de Nascimento</label>");
-		saida.write("<input id=\"dta_nascimento\" type=\"text\">");
+		saida.write("<input id=\"dta_nascimento\" name=\"nascimento\" type=\"text\">");
 		saida.write("<input type=\"submit\">");
 		saida.write("</form>");
 		saida.write("</Body></HTML>");

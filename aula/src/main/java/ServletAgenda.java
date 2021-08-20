@@ -31,31 +31,34 @@ public class ServletAgenda extends HttpServlet {
 	 *  que retorna uma página HTML com um formulário para enviar os dados para o ServletAgenda criado anteriormente.
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		/*
 		String nome = "Arthur";
 		int telefone = 982723123;
 		String dta_nascimento = "25/11/2001";
 		
-		PrintWriter saida = response.getWriter();
 		
-		saida.write("<HTML><Body>");
-		saida.write("<h1 style=text-align:center;>Agenda</h1>");
-		saida.write("<div style=display:flex;justify-content:center;align-items:center;>");
-		saida.write("<br>Nome: "+ nome);
-		saida.write("<br>Telefone: "+ telefone);
-		saida.write("<br>Data de nascimento: "+ dta_nascimento);
-		saida.write("</div>");
-		saida.write("</Body></HTML>");
-		saida.close();
-		
+		*/
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter saida = response.getWriter();
+		
+		String nome = request.getParameter("nome");
+		String telefone = request.getParameter("telefone");
+		String nascimento = request.getParameter("nascimento");
+		
+		saida.write("<HTML><Body>");
+		saida.write("<h1 style=text-align:center;>Agenda</h1>");
+		saida.write("<div style=display:flex;justify-content:center;align-items:center;>");
+		saida.write("<br>Nome: "+ nome);
+		saida.write("<br>Telefone: "+ telefone);
+		saida.write("<br>Data de nascimento: "+ nascimento);
+		saida.write("</div>");
+		saida.write("</Body></HTML>");
+		saida.close();
 	}
 
 }
