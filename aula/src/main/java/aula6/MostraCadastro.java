@@ -40,7 +40,32 @@ public class MostraCadastro extends HttpServlet {
 		String cep_emp = (String) sessao.getAttribute("cep_emp");
 		String estado_emp = (String) sessao.getAttribute("estado_emp");
 		
-		resposta.println("Nome: "+ nome);
+		resposta.write("<html><head><title>Dados Do Usuario</title></head>");
+		resposta.write("<h1 style=text-align:center;>Dados do Usuario</h1>");
+		resposta.write("<div style=display:flex;justify-content:center;align-items:center;>");
+		resposta.write("<br>Nome: "+ nome);
+		resposta.write("<br>Sobrenome: "+ sobrenome);
+		resposta.write("<br>Rua: "+ rua);
+		resposta.write("<br>Complemento: "+ complemento);
+		resposta.write("<br>Cidade: "+ cidade);
+		resposta.write("<br>CEP: "+ cep);
+		resposta.write("<br>Estado: "+ estado +"<br>");
+		resposta.write("<br>Dados da Empresa:<br>");
+		resposta.write("<br>Empresa: "+ empresa);
+		resposta.write("<br>Rua: "+ rua_emp);
+		resposta.write("<br>Complemento: "+ complemento);
+		resposta.write("<br>Cidade: "+ cidade_emp);
+		resposta.write("<br>Estado: "+ estado_emp);
+		resposta.write("</div>");
+		resposta.write("</body></html>");
+		resposta.close();
+		
+		
+		
+		
+		
+		
+		/*resposta.println("Nome: "+ nome);
 		resposta.println("Sobrenome: "+ sobrenome);
 		resposta.println("Rua: "+ rua);
 		resposta.println("Complemento: "+ complemento);
@@ -55,7 +80,7 @@ public class MostraCadastro extends HttpServlet {
 		resposta.println("Complemento Empresa: "+ complemento_emp);
 		resposta.println("Cidade Empresa: "+ cidade_emp);
 		resposta.println("CEP empresa: "+ cep_emp);
-		resposta.println("Estado Empresa: "+ estado_emp);
+		resposta.println("Estado Empresa: "+ estado_emp);*/
 	}
 }
 	

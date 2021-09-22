@@ -82,7 +82,7 @@ public class ServletCadastro extends HttpServlet {
 				
 				response.sendRedirect(request.getContextPath()+ "/MostraCadastro");
 			}else {
-				response.sendRedirect(request.getContextPath()+ "/cadastro1.jsp");
+				response.sendRedirect(request.getContextPath()+ "/cadastroDadosEmpresa.jsp");
 			}
 			
 	}
