@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/validaCpf.js"></script>
+    <link rel="stylesheet" href="cpf.css">
+    <title>Dados Pessoais</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dados de Registro</h1>
+        <label for="inputNome">Nome: </label>
+        <input type="text" id="inputNome" placeholder="ex: Maria Joao">
+        <label for="RegraValida">CPF: </label>
+        <input type="text" id="RegraValida" placeholder="ex: 000.000.000-00" maxlength="14" value="" name="RegraValida" onkeyup="javascript: fMasc( this, mCPF );">
+        <input type="button" value="Inserir" onclick="inserirRegistro()">
+    </div>
+    <table id="registros" border="1">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+        </tr>
+    </table>
+</body>
+
+</html>
